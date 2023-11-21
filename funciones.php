@@ -12,7 +12,8 @@ function mostrar_ol_fichero(string $input): void
 {
 
     $infoArr = $_FILES[$input];
-    $total_archivos = count(array_values($infoArr[array_key_first($infoArr)]));
+    //Non facía falta usar array_values
+    $total_archivos = count($infoArr[array_key_first($infoArr)]);
 
     $i = 0;
     do {
